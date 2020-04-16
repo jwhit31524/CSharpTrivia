@@ -12,14 +12,18 @@ namespace csharptrivia2020
 {
     public partial class QuestionForm : Form
     {
+        private TriviaController triviaController;
+
         public QuestionForm()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        public QuestionForm(TriviaController triviaController, Form formOwner)
         {
-
+            InitializeComponent();
+            this.triviaController = triviaController;
+            Owner = formOwner;
         }
 
         private void QuestionForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,10 +33,7 @@ namespace csharptrivia2020
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ResultsForm resultsForm = new ResultsForm();
-            resultsForm.Tag = Tag;
-            resultsForm.Show(Owner);
+            triviaController.ShowViewResults();
 
         }
     }

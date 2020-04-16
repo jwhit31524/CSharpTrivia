@@ -12,17 +12,22 @@ namespace csharptrivia2020
 {
     public partial class CSharpTrivia2020Form : Form
     {
+        private readonly TriviaController triviaController;
+
         public CSharpTrivia2020Form()
         {
             InitializeComponent();
+            triviaController = new TriviaController(this);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            QuestionForm form = new QuestionForm();
-            form.Tag = this;
-            form.Show(this);
-            Hide();
+            triviaController.Start();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
