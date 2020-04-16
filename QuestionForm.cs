@@ -21,5 +21,10 @@ namespace csharptrivia2020
         {
 
         }
+
+        private void QuestionForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Owner.Show();
+        }
     }
 }

@@ -21,7 +21,8 @@ namespace csharptrivia2020
         {
             QuestionForm form = new QuestionForm();
             form.Tag = this;
-            form.Show();
+            form.Show(this);
+            Hide();
         }
     }
 }
