@@ -34,6 +34,7 @@
             this.C_RadioButton3 = new System.Windows.Forms.RadioButton();
             this.B_RadioButton2 = new System.Windows.Forms.RadioButton();
             this.A_RadioButton = new System.Windows.Forms.RadioButton();
+            this.NextQuestionButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +52,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "What is.........";
+            this.label1.Text = "What is 2 x 24?";
             // 
             // panel1
             // 
@@ -70,10 +71,10 @@
             this.C_RadioButton3.AutoSize = true;
             this.C_RadioButton3.Location = new System.Drawing.Point(4, 66);
             this.C_RadioButton3.Name = "C_RadioButton3";
-            this.C_RadioButton3.Size = new System.Drawing.Size(85, 17);
+            this.C_RadioButton3.Size = new System.Drawing.Size(37, 17);
             this.C_RadioButton3.TabIndex = 2;
             this.C_RadioButton3.TabStop = true;
-            this.C_RadioButton3.Text = "radioButton3";
+            this.C_RadioButton3.Text = "36";
             this.C_RadioButton3.UseVisualStyleBackColor = true;
             // 
             // B_RadioButton2
@@ -81,10 +82,10 @@
             this.B_RadioButton2.AutoSize = true;
             this.B_RadioButton2.Location = new System.Drawing.Point(4, 43);
             this.B_RadioButton2.Name = "B_RadioButton2";
-            this.B_RadioButton2.Size = new System.Drawing.Size(85, 17);
+            this.B_RadioButton2.Size = new System.Drawing.Size(37, 17);
             this.B_RadioButton2.TabIndex = 1;
             this.B_RadioButton2.TabStop = true;
-            this.B_RadioButton2.Text = "radioButton2";
+            this.B_RadioButton2.Text = "48";
             this.B_RadioButton2.UseVisualStyleBackColor = true;
             // 
             // A_RadioButton
@@ -92,17 +93,28 @@
             this.A_RadioButton.AutoSize = true;
             this.A_RadioButton.Location = new System.Drawing.Point(4, 20);
             this.A_RadioButton.Name = "A_RadioButton";
-            this.A_RadioButton.Size = new System.Drawing.Size(85, 17);
+            this.A_RadioButton.Size = new System.Drawing.Size(37, 17);
             this.A_RadioButton.TabIndex = 0;
             this.A_RadioButton.TabStop = true;
-            this.A_RadioButton.Text = "radioButton1";
+            this.A_RadioButton.Text = "56";
             this.A_RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // NextQuestionButton
+            // 
+            this.NextQuestionButton.Location = new System.Drawing.Point(592, 342);
+            this.NextQuestionButton.Name = "NextQuestionButton";
+            this.NextQuestionButton.Size = new System.Drawing.Size(116, 23);
+            this.NextQuestionButton.TabIndex = 6;
+            this.NextQuestionButton.Text = "Next Question";
+            this.NextQuestionButton.UseVisualStyleBackColor = true;
+            this.NextQuestionButton.Click += new System.EventHandler(this.NextQuestionButton_Click);
             // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NextQuestionButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Q1Label);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.RadioButton C_RadioButton3;
         private System.Windows.Forms.RadioButton B_RadioButton2;
         private System.Windows.Forms.RadioButton A_RadioButton;
+        private System.Windows.Forms.Button NextQuestionButton;
     }
 }

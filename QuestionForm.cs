@@ -26,5 +26,14 @@ namespace csharptrivia2020
         {
             Owner.Show();
         }
+
+        private void NextQuestionButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResultsForm resultsForm = new ResultsForm();
+            resultsForm.Tag = Tag;
+            resultsForm.Show(Owner);
+
+        }
     }
 }
