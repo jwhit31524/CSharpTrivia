@@ -16,7 +16,7 @@ namespace csharptrivia2020
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new csharptrivia2020Form());
+            Application.Run(new CSharpTrivia2020Form());
         }
     }
 }

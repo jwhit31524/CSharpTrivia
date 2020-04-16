@@ -1,6 +1,6 @@
 ﻿namespace csharptrivia2020
 {
-    partial class csharptrivia2020Form
+    partial class CSharpTrivia2020Form
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,7 @@
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Start Game";
             this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // WelcomeLabel
             // 
@@ -48,7 +49,7 @@
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(125, 13);
             this.WelcomeLabel.TabIndex = 1;
-            this.WelcomeLabel.Text = "Welcome to Trvia Game!";
+            this.WelcomeLabel.Text = "Welcome to C# Trvia Game!";
             // 
             // csharptrivia2020Form
             // 

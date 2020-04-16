@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="csharptrivia2020Form.cs">
+    <Compile Include="CSharpTrivia2020Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="csharptrivia2020Form.Designer.cs">
-      <DependentUpon>csharptrivia2020Form.cs</DependentUpon>
+    <Compile Include="CSharpTrivia2020Form.Designer.cs">
+      <DependentUpon>CSharpTrivia2020Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="csharptrivia2020Form.resx">
-      <DependentUpon>csharptrivia2020Form.cs</DependentUpon>
+    <Compile Include="QuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionForm.Designer.cs">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CSharpTrivia2020Form.resx">
+      <DependentUpon>CSharpTrivia2020Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuestionForm.resx">
+      <DependentUpon>QuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

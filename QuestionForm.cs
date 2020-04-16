@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace csharptrivia2020
 {
-    public partial class CSharpTrivia2020Form : Form
+    public partial class QuestionForm : Form
     {
-        public CSharpTrivia2020Form()
+        public QuestionForm()
         {
             InitializeComponent();
         }
 
-        private void StartButton_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            QuestionForm form = new QuestionForm();
-            form.Tag = this;
-            form.Show();
+
         }
     }
 }
