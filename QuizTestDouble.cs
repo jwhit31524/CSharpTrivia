@@ -1,37 +1,63 @@
-﻿namespace csharptrivia2020
+﻿using System;
+using System.Collections.Generic;
+
+namespace csharptrivia2020
 {
     internal class QuizTestDouble
     {
-        internal readonly int NumberOfQuestions;
-        internal readonly QuestionTestDouble CurrentQuestion;
-        internal readonly int CurrentNumber;
+        public int NumberOfQuestions
+        {
+            get { return _questionList.Length; }
+            set { }
+        }
+        public QuestionTestDouble CurrentQuestion { 
+            get { return _questionList[_currrentIndex];  }
+            private set { }  
+        }
+        public int CurrentNumber
+        {
+            get { return _currrentIndex + 1; }
+            private set { }
+        }
+
+
+        private QuestionTestDouble[] _questionList = new QuestionTestDouble[5];
+        private int _currrentIndex;
 
         public QuizTestDouble()
         {
-            NumberOfQuestions = 5;
-            var question = new QuestionTestDouble(
+            _questionList[0] = new QuestionTestDouble(
                 "What is 2 x 24?",
                 new[] { "24", "48", "56" }
                 );
-            var question2 = new QuestionTestDouble(
+            _questionList[1] = new QuestionTestDouble(
                "What is the capital of Michigan?",
                new[] { "Detroit", "Lansing", "Farmington Hills" }
                );
-            var question3 = new QuestionTestDouble(
+            _questionList[2] = new QuestionTestDouble(
                  "What is 14 x 5?",
                 new[] { "122", "234", "70" }
                 );
-            var question4 = new QuestionTestDouble(
+            _questionList[3] = new QuestionTestDouble(
                 "What is a branch of U.S. government?",
                 new[] { "Crayon", "Executive", "Vehicle" }
                 );
-            var question5 = new QuestionTestDouble(
+            _questionList[4] = new QuestionTestDouble(
                 "What is a type of bear",
                 new[] { "Leopard", "Polar", "Giraffe" }
                 );
 
-            CurrentQuestion = question;
-            CurrentNumber = 1;
+            _currrentIndex = 0;
+        }
+
+        internal void NextQuestion()
+        {
+            _currrentIndex++;
+        }
+
+        internal void PreviousQuestion()
+        {
+            _currrentIndex--;
         }
     }
 }

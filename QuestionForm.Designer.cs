@@ -47,7 +47,7 @@
             this.QuestionNumberLabel.Size = new System.Drawing.Size(95, 13);
             this.QuestionNumberLabel.TabIndex = 1;
             this.QuestionNumberLabel.Text = "[Question Number]";
-            this.QuestionNumberLabel.Click += new System.EventHandler(this.QuestionNumberLabel_Click);
+        
             // 
             // QuestionTextLabel
             // 
@@ -57,7 +57,7 @@
             this.QuestionTextLabel.Size = new System.Drawing.Size(133, 13);
             this.QuestionTextLabel.TabIndex = 3;
             this.QuestionTextLabel.Text = "[Question Text Goes Here]";
-            this.QuestionTextLabel.Click += new System.EventHandler(this.QuestionTextLabel_Click);
+     
             // 
             // panel1
             // 
@@ -120,6 +120,7 @@
             this.PreviousButton.TabIndex = 7;
             this.PreviousButton.Text = "Previous Question";
             this.PreviousButton.UseVisualStyleBackColor = true;
+            this.PreviousButton.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
             // QuestionForm
             // 
@@ -135,7 +136,7 @@
             this.Text = "QuestionForm";
             this.Activated += new System.EventHandler(this.QuestionForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuestionForm_FormClosed);
-            this.Load += new System.EventHandler(this.QuestionForm_Load);
+         
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

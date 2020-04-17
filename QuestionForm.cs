@@ -13,6 +13,7 @@ namespace csharptrivia2020
     public partial class QuestionForm : Form
     {
         private TriviaController triviaController;
+        private QuizTestDouble quiz = new QuizTestDouble();
 
         public QuestionForm()
         {
@@ -33,14 +34,24 @@ namespace csharptrivia2020
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            triviaController.ShowViewResults();
-
+            // Law of Demeter (Ask, don't tell)
+            quiz.NextQuestion();
+            RefreshLabels();
         }
 
         private void QuestionForm_Activated(object sender, EventArgs e)
         {
-           
-            var quiz = new QuizTestDouble();
+            RefreshLabels();
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            quiz.PreviousQuestion();
+            RefreshLabels();
+        }
+
+        private void RefreshLabels()
+        {
             var question = quiz.CurrentQuestion;
             QuestionNumberLabel.Text = $"Question {quiz.CurrentNumber} of {quiz.NumberOfQuestions}";
             QuestionTextLabel.Text = $"{question.QuestionText}";
@@ -48,21 +59,6 @@ namespace csharptrivia2020
             AnswerA.Text = $"{question.AnswerOptions[0]}";
             AnswerB.Text = $"{question.AnswerOptions[1]}";
             AnswerC.Text = $"{question.AnswerOptions[2]}";
-        }
-
-        private void QuestionForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void QuestionTextLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void QuestionNumberLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
