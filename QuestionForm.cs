@@ -36,5 +36,32 @@ namespace csharptrivia2020
             triviaController.ShowViewResults();
 
         }
+
+        private void QuestionForm_Activated(object sender, EventArgs e)
+        {
+            var question = new QuestionTestDouble();
+            var quiz = new QuizTestDouble();
+            QuestionNumberLabel.Text = $"Question {question.Number} of {quiz.NumberOfQuestions}";
+            QuestionTextLabel.Text = $"{question.QuestionText}";
+
+            AnswerA.Text = $"{question.AnswerOptions[0]}";
+            AnswerB.Text = $"{question.AnswerOptions[1]}";
+            AnswerC.Text = $"{question.AnswerOptions[2]}";
+        }
+
+        private void QuestionForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuestionTextLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QuestionNumberLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

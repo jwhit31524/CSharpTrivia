@@ -60,6 +60,8 @@
     <Compile Include="QuestionForm.Designer.cs">
       <DependentUpon>QuestionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuestionTestDouble.cs" />
+    <Compile Include="QuizTestDouble.cs" />
     <Compile Include="ResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>

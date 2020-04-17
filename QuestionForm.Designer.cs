@@ -28,76 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Q1Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.QuestionNumberLabel = new System.Windows.Forms.Label();
+            this.QuestionTextLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.C_RadioButton3 = new System.Windows.Forms.RadioButton();
-            this.B_RadioButton2 = new System.Windows.Forms.RadioButton();
-            this.A_RadioButton = new System.Windows.Forms.RadioButton();
+            this.AnswerC = new System.Windows.Forms.RadioButton();
+            this.AnswerB = new System.Windows.Forms.RadioButton();
+            this.AnswerA = new System.Windows.Forms.RadioButton();
             this.NextQuestionButton = new System.Windows.Forms.Button();
+            this.PreviousButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Q1Label
+            // QuestionNumberLabel
             // 
-            this.Q1Label.AutoSize = true;
-            this.Q1Label.Location = new System.Drawing.Point(13, 13);
-            this.Q1Label.Name = "Q1Label";
-            this.Q1Label.Size = new System.Drawing.Size(58, 13);
-            this.Q1Label.TabIndex = 1;
-            this.Q1Label.Text = "Question 1";
+            this.QuestionNumberLabel.AutoSize = true;
+            this.QuestionNumberLabel.Location = new System.Drawing.Point(13, 13);
+            this.QuestionNumberLabel.Name = "QuestionNumberLabel";
+            this.QuestionNumberLabel.Size = new System.Drawing.Size(95, 13);
+            this.QuestionNumberLabel.TabIndex = 1;
+            this.QuestionNumberLabel.Text = "[Question Number]";
+            this.QuestionNumberLabel.Click += new System.EventHandler(this.QuestionNumberLabel_Click);
             // 
-            // label1
+            // QuestionTextLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "What is 2 x 24?";
+            this.QuestionTextLabel.AutoSize = true;
+            this.QuestionTextLabel.Location = new System.Drawing.Point(15, 44);
+            this.QuestionTextLabel.Name = "QuestionTextLabel";
+            this.QuestionTextLabel.Size = new System.Drawing.Size(133, 13);
+            this.QuestionTextLabel.TabIndex = 3;
+            this.QuestionTextLabel.Text = "[Question Text Goes Here]";
+            this.QuestionTextLabel.Click += new System.EventHandler(this.QuestionTextLabel_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.C_RadioButton3);
-            this.panel1.Controls.Add(this.B_RadioButton2);
-            this.panel1.Controls.Add(this.A_RadioButton);
+            this.panel1.Controls.Add(this.AnswerC);
+            this.panel1.Controls.Add(this.AnswerB);
+            this.panel1.Controls.Add(this.AnswerA);
             this.panel1.Location = new System.Drawing.Point(16, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 251);
             this.panel1.TabIndex = 5;
             // 
-            // C_RadioButton3
+            // AnswerC
             // 
-            this.C_RadioButton3.AutoSize = true;
-            this.C_RadioButton3.Location = new System.Drawing.Point(4, 66);
-            this.C_RadioButton3.Name = "C_RadioButton3";
-            this.C_RadioButton3.Size = new System.Drawing.Size(37, 17);
-            this.C_RadioButton3.TabIndex = 2;
-            this.C_RadioButton3.TabStop = true;
-            this.C_RadioButton3.Text = "36";
-            this.C_RadioButton3.UseVisualStyleBackColor = true;
+            this.AnswerC.AutoSize = true;
+            this.AnswerC.Location = new System.Drawing.Point(4, 66);
+            this.AnswerC.Name = "AnswerC";
+            this.AnswerC.Size = new System.Drawing.Size(110, 17);
+            this.AnswerC.TabIndex = 2;
+            this.AnswerC.TabStop = true;
+            this.AnswerC.Text = "[Answer Option C]";
+            this.AnswerC.UseVisualStyleBackColor = true;
             // 
-            // B_RadioButton2
+            // AnswerB
             // 
-            this.B_RadioButton2.AutoSize = true;
-            this.B_RadioButton2.Location = new System.Drawing.Point(4, 43);
-            this.B_RadioButton2.Name = "B_RadioButton2";
-            this.B_RadioButton2.Size = new System.Drawing.Size(37, 17);
-            this.B_RadioButton2.TabIndex = 1;
-            this.B_RadioButton2.TabStop = true;
-            this.B_RadioButton2.Text = "48";
-            this.B_RadioButton2.UseVisualStyleBackColor = true;
+            this.AnswerB.AutoSize = true;
+            this.AnswerB.Location = new System.Drawing.Point(4, 43);
+            this.AnswerB.Name = "AnswerB";
+            this.AnswerB.Size = new System.Drawing.Size(110, 17);
+            this.AnswerB.TabIndex = 1;
+            this.AnswerB.TabStop = true;
+            this.AnswerB.Text = "[Answer Option B]";
+            this.AnswerB.UseVisualStyleBackColor = true;
             // 
-            // A_RadioButton
+            // AnswerA
             // 
-            this.A_RadioButton.AutoSize = true;
-            this.A_RadioButton.Location = new System.Drawing.Point(4, 20);
-            this.A_RadioButton.Name = "A_RadioButton";
-            this.A_RadioButton.Size = new System.Drawing.Size(37, 17);
-            this.A_RadioButton.TabIndex = 0;
-            this.A_RadioButton.TabStop = true;
-            this.A_RadioButton.Text = "56";
-            this.A_RadioButton.UseVisualStyleBackColor = true;
+            this.AnswerA.AutoSize = true;
+            this.AnswerA.Location = new System.Drawing.Point(4, 20);
+            this.AnswerA.Name = "AnswerA";
+            this.AnswerA.Size = new System.Drawing.Size(110, 17);
+            this.AnswerA.TabIndex = 0;
+            this.AnswerA.TabStop = true;
+            this.AnswerA.Text = "[Answer Option A]";
+            this.AnswerA.UseVisualStyleBackColor = true;
             // 
             // NextQuestionButton
             // 
@@ -109,18 +112,30 @@
             this.NextQuestionButton.UseVisualStyleBackColor = true;
             this.NextQuestionButton.Click += new System.EventHandler(this.NextQuestionButton_Click);
             // 
+            // PreviousButton
+            // 
+            this.PreviousButton.Location = new System.Drawing.Point(454, 342);
+            this.PreviousButton.Name = "PreviousButton";
+            this.PreviousButton.Size = new System.Drawing.Size(112, 23);
+            this.PreviousButton.TabIndex = 7;
+            this.PreviousButton.Text = "Previous Question";
+            this.PreviousButton.UseVisualStyleBackColor = true;
+            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PreviousButton);
             this.Controls.Add(this.NextQuestionButton);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Q1Label);
+            this.Controls.Add(this.QuestionTextLabel);
+            this.Controls.Add(this.QuestionNumberLabel);
             this.Name = "QuestionForm";
             this.Text = "QuestionForm";
+            this.Activated += new System.EventHandler(this.QuestionForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuestionForm_FormClosed);
+            this.Load += new System.EventHandler(this.QuestionForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -130,12 +145,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Q1Label;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label QuestionNumberLabel;
+        private System.Windows.Forms.Label QuestionTextLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton C_RadioButton3;
-        private System.Windows.Forms.RadioButton B_RadioButton2;
-        private System.Windows.Forms.RadioButton A_RadioButton;
+        private System.Windows.Forms.RadioButton AnswerC;
+        private System.Windows.Forms.RadioButton AnswerB;
+        private System.Windows.Forms.RadioButton AnswerA;
         private System.Windows.Forms.Button NextQuestionButton;
+        private System.Windows.Forms.Button PreviousButton;
     }
 }
