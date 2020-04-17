@@ -39,9 +39,10 @@ namespace csharptrivia2020
 
         private void QuestionForm_Activated(object sender, EventArgs e)
         {
-            var question = new QuestionTestDouble();
+           
             var quiz = new QuizTestDouble();
-            QuestionNumberLabel.Text = $"Question {question.Number} of {quiz.NumberOfQuestions}";
+            var question = quiz.CurrentQuestion;
+            QuestionNumberLabel.Text = $"Question {quiz.CurrentNumber} of {quiz.NumberOfQuestions}";
             QuestionTextLabel.Text = $"{question.QuestionText}";
 
             AnswerA.Text = $"{question.AnswerOptions[0]}";
