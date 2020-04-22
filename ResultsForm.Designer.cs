@@ -100,6 +100,7 @@
             this.PlayAgainButton.TabIndex = 6;
             this.PlayAgainButton.Text = "Play Again";
             this.PlayAgainButton.UseVisualStyleBackColor = true;
+            this.PlayAgainButton.Click += new System.EventHandler(this.PlayAgainButton_Click);
             // 
             // ResultsForm
             // 

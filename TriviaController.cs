@@ -20,6 +20,7 @@ namespace csharptrivia2020
         internal void Start()
         {
             mainForm.Hide();
+            resultsForm.Hide();
             questionForm.Show();
         }
 

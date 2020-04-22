@@ -1,6 +1,6 @@
 ﻿namespace csharptrivia2020
 {
-    internal class QuestionTestDouble
+    public class QuestionTestDouble
     {
       
         internal readonly string QuestionText;

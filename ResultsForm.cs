@@ -31,5 +31,10 @@ namespace csharptrivia2020
         {
             triviaController.ShowViewHome();
         }
+
+        private void PlayAgainButton_Click(object sender, EventArgs e)
+        {
+            triviaController.Start();
+        }
     }
 }

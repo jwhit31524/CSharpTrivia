@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace csharptrivia2020
 {
-    internal class QuizTestDouble
+    public class QuizTestDouble
     {
         public int NumberOfQuestions
         {
@@ -14,12 +14,22 @@ namespace csharptrivia2020
             get { return _questionList[_currrentIndex];  }
             private set { }  
         }
-        public int CurrentNumber
+        public int CurrentQuestionNumber
         {
             get { return _currrentIndex + 1; }
             private set { }
         }
 
+        public bool OnLastQuestion {
+            get { return CurrentQuestionNumber == NumberOfQuestions; }
+            internal set { }
+        }
+
+        public bool OnFirstQuestion {
+            get { return CurrentQuestionNumber == 1; }
+            internal set
+            { }
+        }
 
         private QuestionTestDouble[] _questionList = new QuestionTestDouble[5];
         private int _currrentIndex;

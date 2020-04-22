@@ -20,11 +20,16 @@ namespace csharptrivia2020
             InitializeComponent();
         }
 
+        // MVC Pattern
+        //  - Model: Quiz
+        //  - View: Question Form
+        //  - Controller: Trivia Controller
         public QuestionForm(TriviaController triviaController, Form formOwner)
         {
             InitializeComponent();
             this.triviaController = triviaController;
             Owner = formOwner;
+           // this.quiz = quiz;
         }
 
         private void QuestionForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -35,26 +40,48 @@ namespace csharptrivia2020
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
             // Law of Demeter (Ask, don't tell)
-            quiz.NextQuestion();
-            RefreshLabels();
+            if (quiz.OnLastQuestion)
+            {
+                triviaController.ShowViewResults();
+            } else
+            {
+                quiz.NextQuestion();
+                RefreshForm();
+            }
         }
 
         private void QuestionForm_Activated(object sender, EventArgs e)
         {
-            RefreshLabels();
+            RefreshForm();
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            quiz.PreviousQuestion();
-            RefreshLabels();
+            if (!quiz.OnFirstQuestion)
+            {
+                quiz.PreviousQuestion();
+                RefreshForm();
+            }
+    
+      
+         
         }
 
-        private void RefreshLabels()
+        private void RefreshForm()
         {
             var question = quiz.CurrentQuestion;
-            QuestionNumberLabel.Text = $"Question {quiz.CurrentNumber} of {quiz.NumberOfQuestions}";
+            QuestionNumberLabel.Text = $"Question {quiz.CurrentQuestionNumber} of {quiz.NumberOfQuestions}";
             QuestionTextLabel.Text = $"{question.QuestionText}";
+
+            if (quiz.OnLastQuestion)
+            {
+                NextQuestionButton.Text = "Show Results";
+            } else
+            {
+                NextQuestionButton.Text = "Next Question";
+            }
+
+            PreviousButton.Enabled = !quiz.OnFirstQuestion;
 
             AnswerA.Text = $"{question.AnswerOptions[0]}";
             AnswerB.Text = $"{question.AnswerOptions[1]}";
