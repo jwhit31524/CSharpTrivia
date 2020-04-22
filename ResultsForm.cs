@@ -34,7 +34,7 @@ namespace csharptrivia2020
 
         private void PlayAgainButton_Click(object sender, EventArgs e)
         {
-            triviaController.Start();
+            triviaController.StartNewGame();
         }
     }
 }

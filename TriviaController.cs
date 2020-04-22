@@ -8,6 +8,7 @@ namespace csharptrivia2020
         private readonly Form mainForm;
         private readonly QuestionForm questionForm;
         private readonly ResultsForm resultsForm;
+        private QuizTestDouble quiz;
 
         public TriviaController(Form mainForm)
         {
@@ -17,11 +18,12 @@ namespace csharptrivia2020
             resultsForm = new ResultsForm(this, mainForm);
         }
 
-        internal void Start()
+        internal void StartNewGame()
         {
+            this.quiz = new QuizTestDouble();
             mainForm.Hide();
             resultsForm.Hide();
-            questionForm.Show();
+            questionForm.Show(quiz);
         }
 
         internal void ShowViewResults()

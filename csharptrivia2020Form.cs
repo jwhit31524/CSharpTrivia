@@ -22,7 +22,7 @@ namespace csharptrivia2020
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            triviaController.Start();
+            triviaController.StartNewGame();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
