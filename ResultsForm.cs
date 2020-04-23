@@ -14,6 +14,7 @@ namespace csharptrivia2020
     {
         private readonly TriviaController triviaController;
         private readonly Form mainForm;
+        private QuizTestDouble quiz;
 
         public ResultsForm()
         {
@@ -25,6 +26,7 @@ namespace csharptrivia2020
             InitializeComponent();
             this.triviaController = triviaController;
             Owner = formOwner;
+
         }
 
         private void CloseGameButton_Click(object sender, EventArgs e)
@@ -35,6 +37,34 @@ namespace csharptrivia2020
         private void PlayAgainButton_Click(object sender, EventArgs e)
         {
             triviaController.StartNewGame();
+        }
+
+        private void Question1Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResultsForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResultsForm_Activated(object sender, EventArgs e)
+        {
+            RefreshResultsForm();
+        }
+        internal void Show(QuizTestDouble quiz)
+        {
+            this.quiz = quiz;
+            this.Show();
+        }
+
+        private void RefreshResultsForm()
+        {
+            //MaintextBox.AppendText(grade.ToString());
+            // MaintextBox.AppendText("\r\n");
+            ResultsTextBox.Clear();
+            ResultsTextBox.AppendText($"TotalScore: {quiz.CorrectAnswers} / {quiz.NumberOfQuestions}");
         }
     }
 }

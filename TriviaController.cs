@@ -29,7 +29,7 @@ namespace csharptrivia2020
         internal void ShowViewResults()
         {
             questionForm.Hide();
-            resultsForm.Show();
+            resultsForm.Show(quiz);
 
         
         }

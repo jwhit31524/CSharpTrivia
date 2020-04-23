@@ -10,6 +10,11 @@ namespace csharptrivia2020
             get { return _questionList.Length; }
             set { }
         }
+        public int CorrectAnswers
+        {
+            get { return 0; }
+            set {}
+        }
         public QuestionTestDouble CurrentQuestion { 
             get { return _questionList[_currrentIndex];  }
             private set { }  
