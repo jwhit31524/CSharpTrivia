@@ -1,4 +1,4 @@
-﻿namespace csharptrivia2020
+﻿namespace csharptrivia2020.view
 {
     partial class CSharpTrivia2020Form
     {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using csharptrivia2020.controller;
+using csharptrivia2020.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csharptrivia2020
+namespace csharptrivia2020.view
 {
     public partial class QuestionForm : Form
     {

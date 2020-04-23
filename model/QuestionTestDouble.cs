@@ -1,4 +1,6 @@
-﻿namespace csharptrivia2020
+﻿using csharptrivia2020.model;
+
+namespace csharptrivia2020
 {
     public class QuestionTestDouble : Question
     {

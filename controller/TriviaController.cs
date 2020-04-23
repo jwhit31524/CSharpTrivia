@@ -1,9 +1,11 @@
-﻿using System;
+﻿using csharptrivia2020.model;
+using csharptrivia2020.view;
+using System;
 using System.Windows.Forms;
 
-namespace csharptrivia2020
+namespace csharptrivia2020.controller
 {
-    public class TriviaController 
+    public class TriviaController
     {
         private readonly Form mainForm;
         private readonly QuestionForm questionForm;
@@ -20,7 +22,7 @@ namespace csharptrivia2020
 
         internal void StartNewGame()
         {
-            this.quiz = new QuizTestDouble();
+            quiz = new QuizTestDouble();
             mainForm.Hide();
             resultsForm.Hide();
             questionForm.Show(quiz);
@@ -31,7 +33,7 @@ namespace csharptrivia2020
             questionForm.Hide();
             resultsForm.Show(quiz);
 
-        
+
         }
 
         internal void ShowViewHome()

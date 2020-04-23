@@ -1,4 +1,5 @@
-﻿using System;
+﻿using csharptrivia2020.model;
+using System;
 using System.Collections.Generic;
 
 namespace csharptrivia2020
