@@ -1,12 +1,13 @@
 ﻿namespace csharptrivia2020
 {
-    public class QuestionTestDouble
+    public class QuestionTestDouble : Question
     {
-      
-        internal readonly string QuestionText;
-        internal readonly string[] AnswerOptions;
 
-   
+        public string QuestionText { get; private set; }
+
+        public string[] AnswerOptions { get; private set; }
+
+
         public QuestionTestDouble(string questionText, string[] answerOptions)
         {
             QuestionText = questionText;

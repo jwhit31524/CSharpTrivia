@@ -3,21 +3,22 @@ using System.Collections.Generic;
 
 namespace csharptrivia2020
 {
-    public class QuizTestDouble
+    public class QuizTestDouble : Quiz
     {
         public int NumberOfQuestions
         {
             get { return _questionList.Length; }
-            set { }
+            private set { }
         }
         public int CorrectAnswers
         {
             get { return 0; }
-            set {}
+            private set { }
         }
-        public QuestionTestDouble CurrentQuestion { 
-            get { return _questionList[_currrentIndex];  }
-            private set { }  
+        public Question CurrentQuestion
+        {
+            get { return _questionList[_currrentIndex]; }
+            private set { }
         }
         public int CurrentQuestionNumber
         {
@@ -25,12 +26,14 @@ namespace csharptrivia2020
             private set { }
         }
 
-        public bool OnLastQuestion {
+        public bool OnLastQuestion
+        {
             get { return CurrentQuestionNumber == NumberOfQuestions; }
             internal set { }
         }
 
-        public bool OnFirstQuestion {
+        public bool OnFirstQuestion
+        {
             get { return CurrentQuestionNumber == 1; }
             internal set
             { }
