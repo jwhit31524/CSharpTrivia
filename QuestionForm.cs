@@ -13,7 +13,7 @@ namespace csharptrivia2020
     public partial class QuestionForm : Form
     {
         private TriviaController triviaController;
-        private QuizTestDouble quiz;
+        private Quiz quiz;
 
         public QuestionForm()
         {
@@ -31,7 +31,7 @@ namespace csharptrivia2020
             Owner = formOwner;
         }
 
-        internal void Show(QuizTestDouble quiz)
+        internal void Show(Quiz quiz)
         {
             this.quiz = quiz;
             this.Show();

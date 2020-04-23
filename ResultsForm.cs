@@ -14,7 +14,7 @@ namespace csharptrivia2020
     {
         private readonly TriviaController triviaController;
         private readonly Form mainForm;
-        private QuizTestDouble quiz;
+        private Quiz quiz;
 
         public ResultsForm()
         {
@@ -53,7 +53,7 @@ namespace csharptrivia2020
         {
             RefreshResultsForm();
         }
-        internal void Show(QuizTestDouble quiz)
+        internal void Show(Quiz quiz)
         {
             this.quiz = quiz;
             this.Show();

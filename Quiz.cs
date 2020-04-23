@@ -8,5 +8,10 @@
         int NumberOfQuestions { get; }
         bool OnFirstQuestion { get; }
         bool OnLastQuestion { get; }
+
+        void NextQuestion();
+        void PreviousQuestion();
+
+
     }
 }

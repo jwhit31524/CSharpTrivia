@@ -68,12 +68,12 @@ namespace csharptrivia2020
             _currrentIndex = 0;
         }
 
-        internal void NextQuestion()
+        public void NextQuestion()
         {
             _currrentIndex++;
         }
 
-        internal void PreviousQuestion()
+        public void PreviousQuestion()
         {
             _currrentIndex--;
         }
