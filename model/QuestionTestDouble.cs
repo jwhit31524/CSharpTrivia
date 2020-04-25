@@ -9,11 +9,19 @@ namespace csharptrivia2020
 
         public string[] AnswerOptions { get; private set; }
 
+        public bool IsCorrectAnswer => throw new System.NotImplementedException();
+
+        public bool IsAnswered => throw new System.NotImplementedException();
 
         public QuestionTestDouble(string questionText, string[] answerOptions)
         {
             QuestionText = questionText;
             AnswerOptions = answerOptions;
+        }
+
+        public void SelectOptionIndex(int v)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

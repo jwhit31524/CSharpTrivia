@@ -15,7 +15,7 @@ namespace csharptrivia2020.view
     public partial class ResultsForm : Form
     {
         private readonly TriviaController triviaController;
-        private readonly Form mainForm;
+      
         private Quiz quiz;
 
         public ResultsForm()

@@ -4,5 +4,9 @@
     {
         string[] AnswerOptions { get; }
         string QuestionText { get; }
+        bool IsCorrectAnswer { get; }
+        bool IsAnswered { get; }
+
+        void SelectOptionIndex(int v);
     }
 }
